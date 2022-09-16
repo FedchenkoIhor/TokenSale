@@ -47,7 +47,7 @@ btnMobileMenu.addEventListener("click", () => {
 });
 
 // CONTROL CURRENT SCREEN SIZE
-window.addEventListener("resize", () => {
+function screenSize() {
   if (screen.width <= 928) {
     btnShowHidde(btnMobileMenu, "inline-flex");
     menuItems.classList.add("mobile");
@@ -55,4 +55,8 @@ window.addEventListener("resize", () => {
     btnShowHidde(btnMobileMenu, "none");
     menuItems.classList.remove("mobile");
   }
+}
+window.addEventListener("resize", () => {
+  screenSize();
 });
+window.onload = screenSize();
