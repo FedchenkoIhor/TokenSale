@@ -11,6 +11,7 @@ header {
 
 .title-box {
   margin-top: 3.2rem;
+  padding-left: 5.1rem;
 }
 
 .logo-box {
@@ -30,7 +31,7 @@ h1 {
   letter-spacing: 1.2rem;
   color: var(--main-dark-color);
   text-transform: uppercase;
-  margin-left: 3.2rem;
+  margin-left: 8.2rem;
   line-height: 1.3;
 }
 
@@ -55,7 +56,8 @@ h1 {
   cursor: pointer;
   position: fixed;
   left: 0;
-  top: 8rem;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 998;
 }
 
@@ -69,17 +71,19 @@ nav {
   list-style-type: disc;
   list-style-position: inside;
   padding-left: 3.2rem;
+  padding-top: 9.6rem;
   transition: all 0.3s;
 }
 
 .mobile {
   position: fixed;
   left: -100%;
-  top: 8rem;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 997;
   padding: 3.2rem;
   padding-left: 6.4rem;
-  background-color: rgba(226, 154, 36, 0.5);
+  background-color: var(--primary-color);
   transition: all 0.3s;
 }
 
@@ -160,6 +164,7 @@ nav {
 
 .soc-items {
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
@@ -171,7 +176,7 @@ nav {
 }
 
 .bi:hover {
-  color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 /* 
@@ -182,25 +187,24 @@ nav {
 
 .app-section {
   background-image: url(../img/goldenwave.png), url(../img/goldweb2.png);
-  background-size: 100%;
-  background-position: center;
+  background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
 .apps {
-  display: flex;
-  flex-direction: column;
-  gap: 6.4rem;
-  padding: 20rem 0;
+  padding: 16rem 0 9.6rem 0;
 }
 
-.app-items {
-  flex-direction: row;
-  justify-content: space-around;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
 }
 
 .app-img {
-  width: 85%;
+  display: block;
+  margin: 2.4rem auto;
+  width: 55%;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -212,6 +216,7 @@ nav {
 .subtitle__white {
   color: #fff;
   text-align: center;
+  margin: 3.2rem 0;
 }
 
 /* 
@@ -237,6 +242,14 @@ nav {
   gap: 3.2rem;
   align-items: flex-start;
   width: 100%;
+}
+
+.text-box:first-child {
+  padding-left: 2.4rem;
+}
+
+.text-box:last-child {
+  padding-right: 2.4rem;
 }
 
 .descr-title {
@@ -282,8 +295,8 @@ nav {
 
 .btn__full {
   position: absolute;
-  bottom: 0;
-  left: -12.8rem;
+  bottom: -0.2rem;
+  left: -18rem;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
   color: #fff;
@@ -358,12 +371,19 @@ footer {
 
 .footer.menu-items {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   gap: 2.4rem;
 }
 
 .footer.menu-item {
   text-align: center;
+  padding: 2rem 2.4rem;
+}
+
+.soc-box.footer {
+  display: none;
+  margin-top: 0;
+  width: 100%;
 }
 
 .copyright {
