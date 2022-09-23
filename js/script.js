@@ -5,23 +5,25 @@ const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
+// FUNCTION SHOW / HIDE ELEMENT
+const elemShowHidde = (elem, event) => {
+  elem.style.display = event;
+};
+
 // STICKY NAVIGATION
 const sectionHeroEl = document.querySelector("header");
 const btnMobileMenu = document.querySelector(".btn__mobile-menu");
 const menuItems = document.querySelector(".menu-items");
-const btnShowHidde = (elem, event) => {
-  elem.style.display = event;
-};
 
 const obs = new IntersectionObserver(
   (entiers) => {
     const ent = entiers[0];
     if (screen.width > 928) {
       if (!ent.isIntersecting) {
-        btnShowHidde(btnMobileMenu, "inline-flex");
+        elemShowHidde(btnMobileMenu, "inline-flex");
         menuItems.classList.add("mobile");
       } else {
-        btnShowHidde(btnMobileMenu, "none");
+        elemShowHidde(btnMobileMenu, "none");
         menuItems.classList.remove("mobile");
       }
     }
@@ -49,10 +51,10 @@ btnMobileMenu.addEventListener("click", () => {
 // CONTROL CURRENT SCREEN SIZE
 function screenSize() {
   if (screen.width <= 928) {
-    btnShowHidde(btnMobileMenu, "inline-flex");
+    elemShowHidde(btnMobileMenu, "inline-flex");
     menuItems.classList.add("mobile");
   } else {
-    btnShowHidde(btnMobileMenu, "none");
+    elemShowHidde(btnMobileMenu, "none");
     menuItems.classList.remove("mobile");
   }
 }
@@ -147,8 +149,8 @@ const followUsBtn = document.getElementById("footerFollowUs");
 followUsBtn.addEventListener("click", () => {
   const socBox = document.querySelector(".soc-box.footer");
   socBox.offsetHeight === 0
-    ? (socBox.style.display = "block")
-    : (socBox.style.display = "none");
+    ? elemShowHidde(socBox, "block")
+    : elemShowHidde(socBox, "none");
 });
 
 // SWIPER SLIDER
@@ -157,12 +159,14 @@ const swiper = new Swiper(".mySwiper", {
   loop: true,
   autoplay: {
     delay: 2000,
+    disableOnInteraction: false,
   },
   breakpoints: {
     // when window width is >= 928px
     928: {
       slidesPerView: 3,
     },
+    // when window width is >= 544px
     544: {
       slidesPerView: 2,
     },
