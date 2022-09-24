@@ -60,15 +60,10 @@
           </div>
         </div>
       </div>
-      <video
-        autoplay
-        loop
-        mute
-        src="video/Globe_Master.webm"
-        type="video/webm"
-        class="earth-img"
-      ></video>
-      <!-- <img src="img/goldentera.png" alt="Golden Earth" class="earth-img" /> -->
+      <video autoplay muted loop class="earth-img">
+        <source src="video/Globe_Master_2.webm" type="video/webm" />
+      </video>
+      <!-- <img src="video/Globe_Master.webm" alt="Golden Earth" class="earth-img" /> -->
     </header>
     <main>
       <!-- APP SECTION -->
@@ -148,12 +143,16 @@
                 freedom to exit and enter the ecosystem as they wish.
               </p>
             </div>
-            <div class="coin img-box">
-              <img src="img/BSK.jpg" alt="Bitcoin" class="coin-img" />
-            </div>
-            <div class="coin img-box">
-              <img src="img/TSK.jpg" alt="Bitcoin" class="coin-img" />
-            </div>
+            <picture class="coin img-box">
+              <source srcset="img/BSK.webp" type="image/webp" />
+              <source srcset="img/BSK.jpg" type="image/jpg" />
+              <img src="img/BSK.jpg" alt="Biskoin Token" class="coin-img" />
+            </picture>
+            <picture class="coin img-box">
+              <source srcset="img/TSK.webp" type="image/webp" />
+              <source srcset="img/TSK.jpg" type="image/jpg" />
+              <img src="img/TSK.jpg" alt="Taskoin Token" class="coin-img" />
+            </picture>
             <div class="coin text-box">
               <h2 class="subtitle">Taskoin Token</h2>
               <h3 class="descr-title">(T$K)</h3>
@@ -232,18 +231,26 @@
               </p>
             </div>
             <div class="distribution img-box">
-              <img
-                src="img/diagram1.jpg"
-                alt="Bitcoin"
-                class="distribution-img"
-              />
+              <picture>
+                <source srcset="img/diagram1.webp" type="image/webp" />
+                <source srcset="img/diagram1.jpg" type="image/jpg" />
+                <img
+                  src="img/diagram1.jpg"
+                  alt="diagram B$K Token Distribution"
+                  class="distribution-img"
+                />
+              </picture>
             </div>
             <div class="distribution img-box">
-              <img
-                src="img/diagram2.jpg"
-                alt="Bitcoin"
-                class="distribution-img"
-              />
+              <picture>
+                <source srcset="img/diagram2.webp" type="image/webp" />
+                <source srcset="img/diagram2.jpg" type="image/jpg" />
+                <img
+                  src="img/diagram2.jpg"
+                  alt="diagram Income Distribution"
+                  class="distribution-img"
+                />
+              </picture>
             </div>
             <div class="distribition text-box">
               <h2 class="subtitle subtitle__gold">Income Distribution</h2>
