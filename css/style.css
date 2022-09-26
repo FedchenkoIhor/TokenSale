@@ -145,6 +145,18 @@ nav {
   z-index: -1;
 }
 
+.grid-img {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  object-position: no-repeat;
+  width: 100%;
+  z-index: -2;
+}
+
 .btn__join,
 .btn__buy {
   border: 3px solid var(--primary-color);
