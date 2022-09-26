@@ -87,6 +87,11 @@ nav {
   transition: all 0.3s;
 }
 
+.bi.bi-chevron-left,
+.bi.bi-chevron-right {
+  color: var(--main-color);
+}
+
 .menu-item {
   position: relative;
   font-size: 1.8rem;
