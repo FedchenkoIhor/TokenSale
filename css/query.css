@@ -127,6 +127,10 @@
     width: 50%;
   }
 
+  .grid-img {
+    top: 20%;
+  }
+
   .title-box {
     padding: 0;
   }
