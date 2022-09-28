@@ -52,7 +52,8 @@ h1 {
   font-size: 2.4rem;
   font-weight: 600;
   border: none;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: rgba(226, 154, 36, 0.5);
   cursor: pointer;
   position: fixed;
@@ -84,7 +85,8 @@ nav {
   z-index: 997;
   padding: 3.2rem;
   padding-left: 6.4rem;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: var(--primary-color);
   transition: all 0.3s;
 }
@@ -202,10 +204,24 @@ nav {
 */
 
 .app-section {
-  background-image: url(../img/goldenwave.png), url(../img/goldweb2.png);
+  position: relative;
+  background-image: url(../img/goldenwave.png);
+  /* , url(../img/goldweb2.png); */
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+.vawes {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-vawes-img {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  z-index: -2;
 }
 
 .apps {
