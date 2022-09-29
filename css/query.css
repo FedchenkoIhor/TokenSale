@@ -42,6 +42,19 @@
     width: 100%;
   }
 
+  .vawes {
+    height: auto;
+  }
+
+  .grid-vawes-img {
+    height: 100%;
+    width: auto;
+  }
+
+  .subtitle__white {
+    margin-top: 3.2rem;
+  }
+
   .text-box:first-child {
     padding-left: 0;
   }
@@ -141,6 +154,10 @@
 
   .app-img {
     width: 65%;
+  }
+
+  .subtitle__white {
+    margin-top: 8.6rem;
   }
 
   .img-box {
